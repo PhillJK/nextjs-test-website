@@ -1,17 +1,13 @@
 import React from "react";
-import Router from "next/router";
-import Head from "next/head";
+import MainLayout from "../../layouts/MainLayout";
 
 const About = () => {
   return (
-    <React.Fragment>
-      <Head>
-        <title>About</title>
-      </Head>
-      <h1>About page</h1>
-      <button onClick={() => Router.push("/")}>Go back home</button>
-      <button onClick={() => Router.push("/posts")}>Go to Posts page</button>
-    </React.Fragment>
+    <MainLayout title="about">
+      <React.Fragment>
+        <h1>About page</h1>
+      </React.Fragment>
+    </MainLayout>
   );
 };
 

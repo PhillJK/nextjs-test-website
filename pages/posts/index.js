@@ -1,16 +1,10 @@
-import Head from "next/head";
-import Router from "next/router";
+import MainLayout from "../../layouts/MainLayout";
 
 const PostPage = () => {
   return (
-    <>
-      <Head>
-        <title>Posts</title>
-      </Head>
+    <MainLayout title="Posts">
       <h1>Post</h1>
-      <button onClick={() => Router.push("/")}>Go back home</button>
-      <button onClick={() => Router.push("/about")}>Go to About page</button>
-    </>
+    </MainLayout>
   );
 };
 
