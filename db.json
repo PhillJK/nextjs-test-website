@@ -20,5 +20,8 @@
       "title": "C++ is difficult",
       "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt nisl sit amet tempor tincidunt. Vestibulum ultricies tincidunt diam sit amet accumsan. Etiam sed magna magna. Praesent euismod magna sed tellus porttitor elementum. Sed blandit elit ultrices lorem varius, non luctus mauris condimentum."
     }
-  ]
+  ],
+  "about": {
+    "title": "About us"
+  }
 }

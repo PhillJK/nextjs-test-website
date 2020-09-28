@@ -44,7 +44,7 @@ const PostPage = ({ posts: serverPosts }) => {
 
 PostPage.getInitialProps = async ({ req }) => {
   if (!req) {
-    return null;
+    return { post: null };
   }
 
   const response = await fetch("http://localhost:4200/posts");
