@@ -1,21 +1,30 @@
-import { useState, useEffect } from "react";
 import MainLayout from "../../layouts/MainLayout";
+import Link from "next/link";
 
-const PostPage = () => {
-  const [posts, setPosts] = useState([]);
-  useEffect(() => {
-    async function load() {
-      const response = await fetch("https://localhost:4200/posts");
-      const json = response.json;
-      setPosts(json);
-    }
-    load();
-  }, [posts]);
+const PostPage = ({ posts }) => {
   return (
     <MainLayout title="Posts">
       <h1>Posts Page</h1>
+      <ul>
+        {posts.map((post) => (
+          <li key={post.id}>
+            <Link href={"/posts/[id]"} as={`/posts/${post.id}`}>
+              <a>{post.title}</a>
+            </Link>
+          </li>
+        ))}
+      </ul>
     </MainLayout>
   );
+};
+
+PostPage.getInitialProps = async () => {
+  const response = await fetch("http://localhost:4200/posts");
+  const posts = await response.json();
+
+  return {
+    posts
+  };
 };
 
 export default PostPage;
