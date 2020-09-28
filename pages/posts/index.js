@@ -1,7 +1,31 @@
+import { useState, useEffect } from "react";
 import MainLayout from "../../layouts/MainLayout";
 import Link from "next/link";
 
-const PostPage = ({ posts }) => {
+const PostPage = ({ posts: serverPosts }) => {
+  const [posts, setPosts] = useState(serverPosts);
+
+  useEffect(() => {
+    async function load() {
+      const response = await fetch("http://localhost:4200/posts");
+      const data = await response.json();
+
+      setPosts(data);
+    }
+
+    if (!serverPosts) {
+      load();
+    }
+  });
+
+  if (!posts) {
+    return (
+      <MainLayout>
+        <p>Loading ...</p>
+      </MainLayout>
+    );
+  }
+
   return (
     <MainLayout title="Posts">
       <h1>Posts Page</h1>
@@ -18,7 +42,11 @@ const PostPage = ({ posts }) => {
   );
 };
 
-PostPage.getInitialProps = async () => {
+PostPage.getInitialProps = async ({ req }) => {
+  if (!req) {
+    return null;
+  }
+
   const response = await fetch("http://localhost:4200/posts");
   const posts = await response.json();
 
