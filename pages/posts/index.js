@@ -9,6 +9,7 @@ const PostPage = () => {
       const json = response.json;
       setPosts(json);
     }
+    load();
   }, [posts]);
   return (
     <MainLayout title="Posts">
