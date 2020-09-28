@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Javascritp Post",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt nisl sit amet tempor tincidunt. Vestibulum ultricies tincidunt diam sit amet accumsan. Etiam sed magna magna. Praesent euismod magna sed tellus porttitor elementum. Sed blandit elit ultrices lorem varius, non luctus mauris condimentum."
+    },
+    {
+      "id": 2,
+      "title": "PHP Post",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt nisl sit amet tempor tincidunt. Vestibulum ultricies tincidunt diam sit amet accumsan. Etiam sed magna magna. Praesent euismod magna sed tellus porttitor elementum. Sed blandit elit ultrices lorem varius, non luctus mauris condimentum."
+    },
+    {
+      "id": 3,
+      "title": "Learn C#",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt nisl sit amet tempor tincidunt. Vestibulum ultricies tincidunt diam sit amet accumsan. Etiam sed magna magna. Praesent euismod magna sed tellus porttitor elementum. Sed blandit elit ultrices lorem varius, non luctus mauris condimentum."
+    },
+    {
+      "id": 4,
+      "title": "C++ is difficult",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tincidunt nisl sit amet tempor tincidunt. Vestibulum ultricies tincidunt diam sit amet accumsan. Etiam sed magna magna. Praesent euismod magna sed tellus porttitor elementum. Sed blandit elit ultrices lorem varius, non luctus mauris condimentum."
+    }
+  ]
+}
